@@ -26,6 +26,10 @@ h1{
     margin: 0;
 }
 
+.text-center{
+    text-align: center;
+}
+
 .flex-center{
     display: flex;
     justify-content: center;
@@ -64,6 +68,10 @@ h1{
     width: 50%;
 }
 
+.transition-all{
+    transition: all ease-in-out 0.3s;
+}
+
 header{
     position: fixed;
     z-index: 200;
@@ -95,8 +103,8 @@ nav a{
     background-color: #ffffff;
     text-align: center;
     padding: 2% 10%;
-    border-radius: 50% 20% / 10% 40%;
-    transition: all ease-in-out 0.3s;
+    border-radius: 10px 100px / 120px;
+    
     cursor: pointer;
     font-weight: 600;
 }
@@ -126,11 +134,9 @@ nav a:hover{
     display: flex;
     flex-direction: column;
     padding: 1% 6%;
-    transition: all ease-in-out 0.3s;
 }
 
 .dropdown ul li{
-    transition: all ease-in-out 0.2s;
     width: 100%;
 }
 
@@ -142,7 +148,7 @@ nav a:hover{
 }
 
 .layout-slides{
-    background-color: #3b0a06;
+    background-color: #03031f;
     height: 80vh;
     margin-top: 13vh;
 }
@@ -164,10 +170,42 @@ nav a:hover{
     color: #ffffff;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 2em;
+    border-radius: 10px 0 0 10px;
+}
+
+.btn-back-slide,
+.btn-next-slide{
+    height: 100%;
+    border: 0 solid #EEC643;
+    cursor: pointer;
+}
+
+.btn-back-slide{
+    border-left-width: 1ex;
+    border-radius: 10px 0 0 10px;
+    cursor: pointer;
+}
+
+.btn-next-slide{
+    border-right-width: 2ex;
+    border-radius: 0 10px 10px 0;
+    right: 0;
+}
+
+.btn-back-slide:hover{
+    border-left-width: 2ex;
+}
+
+.btn-next-slide:hover{
+    border-left-width: 2ex;
 }
 
 .layout-img,
 .layout-description{
     position: relative;
     width: 100%;
+}
+
+.img-sld{
+    margin-left: 6%;
 }
