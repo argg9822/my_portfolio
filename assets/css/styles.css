@@ -5,6 +5,8 @@
 body{
     margin: 0;
     padding: 0;
+    background-color: #EEF0F2;
+    width: 100%;
 }
 
 a{
@@ -50,6 +52,10 @@ h1{
     position: relative;
 }
 
+.absolute{
+    position: absolute;
+}
+
 .w-100{
     width: 100%;
 }
@@ -59,39 +65,43 @@ h1{
 }
 
 header{
-    background-color: #08415C;
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    width: 100%;
+    background-color: #02020A;
     color: #ffffff;
     padding: 1% 3%;
+    height: 10vh;
 }
 
 ul{
     list-style-type: none;
-    display: inline-flex;
 }
 
-li{
-    width: 100%;
+header nav ul{
+    display: inline-flex;
+    margin-right: 10%;
 }
 
 .brand small{
-    color: #E8DB7D;
+    color: #597081;
     font-weight: bold;
     letter-spacing: 2px;
 }
 
 nav a{
     box-sizing: border-box;
-    background-color: #ffffff62;
+    background-color: #ffffff;
     text-align: center;
     padding: 2% 10%;
     border-radius: 50% 20% / 10% 40%;
-    box-shadow: 0 2px 4px #000;
     transition: all ease-in-out 0.3s;
     cursor: pointer;
+    font-weight: 600;
 }
 
 nav a:hover{
-    background-color: #ffffffbf;
     border-radius: 6px;
 }
 
@@ -111,7 +121,7 @@ nav a:hover{
     background-color: #ffffff;
     border-radius: 3px;
     margin-top: 0.3rem;
-    width: 100%;
+    width: 50%;
     color: #000000;
     display: flex;
     flex-direction: column;
@@ -121,6 +131,7 @@ nav a:hover{
 
 .dropdown ul li{
     transition: all ease-in-out 0.2s;
+    width: 100%;
 }
 
 .dropdown ul li:hover{
@@ -130,7 +141,33 @@ nav a:hover{
     padding-left: 3%;
 }
 
-.main-container{
-    padding: 1% 3%;
+.layout-slides{
+    background-color: #3b0a06;
+    height: 80vh;
+    margin-top: 13vh;
 }
 
+.layer-sl-1{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    z-index: 100;
+    padding: 1%;
+    top: 4%;
+    left: 1%;
+    width: 95%;
+    background-color: #ffffff0c;
+    border-radius: 30px;
+}
+
+.layout-description{   
+    background-color: #ffffff1a;
+    color: #ffffff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2em;
+}
+
+.layout-img,
+.layout-description{
+    position: relative;
+    width: 100%;
+}
