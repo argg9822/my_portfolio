@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href="assets/css/styles.css">
+    <link rel = "stylesheet" href="assets/css/styles.css?0.1">
+    <link rel = "stylesheet" href="assets/css/dinamic.css?0.1">
     <title>ARGG Portfolio</title>
 </head>
 <body>
@@ -33,18 +34,20 @@
         <div class="relative layout-slides flex-between ">
             <div class="absolute layer-sl-1">
                 <div class="layout-description flex-between" >
-                    <span class="absolute btn-back-slide transition-all"></span>
+                    <a class="absolute btn-back-slide transition-all" id="btn-back-slide"></a>
                     <h2 class="text-center w-100">Gesi App</h2>
                 </div>
                 <div class="layout-img flex-between">
-                    <img src="./assets/img/imgsl1.png" alt="Img projects" class="img-sld" width="750">
-                    <span class="absolute btn-next-slide transition-all"></span>
+                    <div class="transition-all" id="box-slide">
+                        <img src="./assets/img/imgsl1.png" alt="Img projects" class="img-sld transition-all" id ="img-sld" width="750">
+                    </div>
+                    <a class="absolute btn-next-slide transition-all" id = "btn-next-slide"></a>
                 </div>
             </div>
             
         </div>
     </main>
 
-    <script type="module" src="assets/js/main.js"></script>
+    <script type="module" src="assets/js/main.js?0.1"></script>
 </body>
 </html>
