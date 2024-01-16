@@ -1,4 +1,4 @@
-import DropdownMenu from './classes/dropdownMenu.js';
+import DropdownMenu from './classes/DropdownMenu.js';
 import SlidesFunction from './classes/SlidesFunction.js';
 
 const toggleDropDown = new DropdownMenu("btn-menu-1", "items-dd-1");
