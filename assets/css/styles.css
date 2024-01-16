@@ -149,7 +149,7 @@ nav a:hover{
 
 .layout-slides{
     background-color: #03031f;
-    height: 80vh;
+    height: 87vh;
     margin-top: 13vh;
 }
 
@@ -161,6 +161,7 @@ nav a:hover{
     top: 4%;
     left: 1%;
     width: 95%;
+    height: 70vh;
     background-color: #ffffff0c;
     border-radius: 30px;
 }
@@ -178,6 +179,8 @@ nav a:hover{
     height: 100%;
     border: 0 solid #EEC643;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 .btn-back-slide{
@@ -190,6 +193,40 @@ nav a:hover{
     border-right-width: 2ex;
     border-radius: 0 10px 10px 0;
     right: 0;
+}
+
+.btn-next-slide::after,
+.btn-back-slide::after{
+    content: '';
+    position: absolute;
+    border: solid #27283800;
+    padding: 0;
+    transition: all 0.3s linear;
+}
+
+.btn-next-slide:hover::after,
+.btn-back-slide:hover::after{
+    padding: 4px;
+    transform: rotate(-45deg) scale(2);
+    border: solid #272838;
+}
+
+.btn-next-slide::after{
+    left: -10px;
+    border-width: 0 2px 2px 0;
+}
+
+.btn-back-slide::after{
+    right: 10px;
+    border-width: 2px 0 0 2px;
+}
+
+.btn-next-slide:hover::after{
+    border-width: 0 2px 2px 0;
+}
+
+.btn-back-slide:hover::after{
+    border-width: 2px 0 0 2px;
 }
 
 .btn-back-slide:hover{
@@ -209,3 +246,4 @@ nav a:hover{
 .img-sld{
     margin-left: 6%;
 }
+
