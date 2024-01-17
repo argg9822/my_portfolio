@@ -8,7 +8,7 @@ class SlidesFunction {
             this.slide = document.getElementById(atrSlides.img);
             this.slideLeftFadeOut();
             this.slideRightFadeOut();
-        }
+        } 
     }
 
     slideLeftFadeOut(){

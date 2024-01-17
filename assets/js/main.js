@@ -11,6 +11,6 @@ const slides = new SlidesFunction({
 })
 
 slides.slideLeftFadeOut();
-slides.slideRightFadeOut();
+slides.slideRightFadeOut(); 
 
 console.log(document.getElementById('img-sld').offsetLeft);
