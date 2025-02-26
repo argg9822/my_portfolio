@@ -7,13 +7,41 @@
     <title>ARGG Portfolio</title>
 </head>
 <body>
-    <header>
-        <h1>Welcome to my services portfolio</h1>
+    <header class="flex-between">
+        <div class="brand">
+            <h1>Welcome to my services portfolio!</h1>
+            <small>Ready to continue learning!</small>
+        </div>
+        
+        <nav class="flex-right w-50">
+            <ul class="w-50 flex-right">
+                <li class="dropdown relative">
+                    <a href="#" id="btn-menu-1" class="color-dark">My projects</a>
+                    <ul id="items-dd-1" data-show = "true">
+                        <li>Node JS</li>
+                        <li>React</li>
+                    </ul>
+                </li>
+                <li class="flex-center">
+                    <a href="#" class="color-dark">About me</a>
+                </li>
+            </ul>
+        </nav>
     </header>
     
-    <h2>¡Ready to continue learning!</h2>
+    <main id="main-container" class="main-container">
+        
+        <div class="layout-slides flex-between">
+            <div class="layout-description">
+                <h2>Proyecto "Nuevas páginas"</h2>
+            </div>
+            <div>
+                <img src="./assets/img/project_nuevas_paginas.jpg" alt="Proyecto papeleria" width="750">
+            </div>
+            
+        </div>
+    </main>
 
-
-    
+    <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>
