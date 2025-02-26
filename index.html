@@ -1,60 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href="assets/css/styles.css?0.2">
-    <link rel = "stylesheet" href="assets/css/dinamic.css?0.2">
-    <title>ARGG Portfolio</title>
-</head>
-<body>
-    <header class="flex-between">
-        <div class="brand">
-            <h1>Welcome to my services portfolio!</h1>
-            <small>Ready to continue learning!</small>
-        </div>
-        
-        <nav class="flex-right w-50">
-            <ul class="w-50 flex-right">
-                <li class="dropdown relative w-100">
-                    <a href="#" id="btn-menu-1">My projects</a>
-                    <ul id="items-dd-1" class="transition-all" data-show = "true">
-                        <li class="w-50 transition-all">Node JS</li>
-                        <li class="w-50 transition-all">React</li>
-                    </ul>
-                </li>
-                <li class="flex-center w-50">
-                    <a href="#" class="transition-all">About me</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main id="main-container" class="main-container">
-        <section class="relative layout-slides flex-between ">
-            <article class="absolute layer-sl-1">
-                <div class="layout-description flex-between" >
-                    <a class="absolute btn-back-slide transition-all" id="btn-back-slide"></a>
-                    <div class="flex-column w-100 text-center">
-                        <h2>Gesi App</h2>
-                        <p>My first project!</p>
-                        <p>It's not the best code, but I learned a lot</p>
-                    </div>
-                </div>
-
-                <div class="layout-img flex-between">
-                    <figure class="transition-all" id="box-slide-1">
-                        <img src="./assets/img/imgsl1.png" alt="Img projects" class="img-sld transition-all" id ="img-sld" width="750">
-                    </figure>
-                    <figure>
-                        <img src="" alt="" >
-                    </figure>
-                    <a class="absolute btn-next-slide transition-all" id = "btn-next-slide"></a>
-                </div>
-            </article>
-        </section>
-    </main>
-
-    <script type="module" src="assets/js/main.js?0.2"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
