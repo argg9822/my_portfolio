@@ -1,0 +1,256 @@
+@import url('./dinamic.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: "Montserrat", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background-color: #212121;
+    width: 100%;
+    min-height: 100vh;
+    color: #f5f5f5;
+}
+
+a{
+    text-decoration: none;
+}
+
+.text-white{
+    color: #ffffff;
+}
+
+.text-dark{
+    color: #000000;
+}
+
+h1{
+    font-size: 1.5em;
+    margin: 0;
+}
+
+h2{
+    font-size: 1.2em;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-between{
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.relative{
+    position: relative;
+}
+
+.absolute{
+    position: absolute;
+}
+
+.top-0{
+    top: 0;
+}
+
+.top-25-n{
+    top: -25px;
+}
+
+.left-0{
+    left: 0;
+}
+
+.left-25-n{
+    left: -25px;
+}
+
+.right-0{
+    right: 0;
+}
+
+.w-100{
+    width: 100%;
+}
+
+.w-50{
+    width: 50%;
+}
+
+.transition-all{
+    transition: all ease-in-out 0.3s;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.main-container{
+    width: 100%;
+    max-width: 1000px;
+    background-color: #171717;
+    padding: 20px 5%;
+    box-shadow: 0px 0px 10px 5px rgb(255 255 255 / 16%);
+}
+
+header{
+    display: grid;
+    gap: 7%;
+}
+
+.profile-img{
+    position: relative;
+    grid-row: span 2 / span 2;    
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.profile-img h2{
+    width: 200px;
+    text-align: center;
+    margin-bottom: 6%;
+    color: rgba(200, 50, 50, 1);
+}
+
+.profile-img img{
+    transition: all ease-in-out 0.3s;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    box-shadow: 0px 6px 10px 3px #8686866b;
+}
+
+.description-container{
+    grid-column-start: 2;
+}
+
+.nav-container ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav a{
+    color: #ffffff;
+    box-sizing: border-box;
+    text-align: center;
+    border-bottom: 1px solid #ffffff00;
+    cursor: pointer;
+    font-weight: 300;
+    transition: all ease-in-out 0.3s;
+}
+
+nav a:hover{
+    border-bottom: 1px solid #ffffff;
+}
+
+.dropdown a::after {
+    content: "";
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 4px;
+    transform: rotate(45deg) translateX(-4px);
+    margin-left: 6%;
+}
+
+.dropdown ul{
+    position: absolute;
+    z-index: 100;
+    background-color: #ffffff8c;
+    border-radius: 3px;
+    margin-top: 0.3rem;
+    width: 50%;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    padding: 1% 6%;
+}
+
+.dropdown ul li{
+    width: 100%;
+}
+
+.dropdown ul li:hover{
+    background-color: #388697;
+    cursor: pointer;
+    color: #ffffff;
+    padding-left: 3%;
+}
+
+.section-title{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+    box-shadow: inset 0 0 2px #ffffff;
+}
+
+.project-card{
+    width: 100%;
+    background-color: #262626;
+    border-radius: 3px;
+    padding: 20px 2%;
+    box-shadow: 13px 15px 20px 0px #000000;
+    transition: all ease-in-out 0.3s;
+}
+
+.project-card img{
+    width: 250px;
+}
+
+@media (max-width: 767px) {
+    header{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-container{
+        width: 100%;
+        margin: 13px 0; 
+    }
+
+    .nav-container ul{
+        display: flex;
+        justify-content: space-between;
+    }
+}
