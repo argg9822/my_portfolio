@@ -1,16 +1,15 @@
-import DropdownMenu from './classes/dropdownMenu.js';
-import SlidesFunction from './classes/SlidesFunction.js';
+import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
 
-const toggleDropDown = new DropdownMenu("btn-menu-1", "items-dd-1");
-toggleDropDown.toggleMenu();
-
-const slides = new SlidesFunction({
-    btnBack: "btn-back-slide",
-    btnNext: "btn-next-slide",
-    img: "img-sld"
-})
-
-slides.slideLeftFadeOut();
-slides.slideRightFadeOut(); 
-
-console.log(document.getElementById('img-sld').offsetLeft);
+new Swiper(".swiper", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});

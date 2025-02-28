@@ -1,64 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href="./public/css/main.css">    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./public/css/main.css" />
     <title>ARGG Portfolio</title>
-</head>
-<body>
-  <div class="main-container">
-    <header>
+  </head>
+  <body>
+    <div class="main-container">
+      <header>
         <div class="profile-img flex-column flex-start">
           <h2>Aramis Garcia</h2>
           <div class="relative">
-            <object type="image/svg+xml" class="absolute top-0 left-0" data="./public/icons/profile-light.svg"></object>
-            <img src="./public/img/profile-img.png" alt="">
+            <object
+              type="image/svg+xml"
+              class="absolute top-0 left-0"
+              data="./public/icons/profile-light.svg"
+            ></object>
+            <img src="./public/img/profile-img.png" alt="" />
           </div>
         </div>
-        
-        <div class="nav-container">
-          <nav class="">
-              <ul>
-                  <li class="relative">
-                      <a href="#" id="btn-menu-1">Proyectos</a>
-                  </li>
-                  <li class="flex-center w-50">
-                      <a href="#" class="transition-all">Acerca de mí</a>
-                  </li>
-              </ul>
-          </nav>
-        </div>
+
+        <nav class="nav-container">
+          <ul>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/argg-dev"
+                title="Perfil de LinkedIn"
+                target="_blank"
+                id="btn-menu"
+              >
+                <img
+                  src="./public/icons/linkedin-logo.png"
+                  alt="linkedin-logo"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/argg9822"
+                title="Perfil de Github"
+                target="_blank"
+                id="btn-menu"
+              >
+                <img src="./public/icons/github-logo.png" alt="github-logo" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/argg9822"
+                title=" Descargar CV"
+                target="_blank"
+                id="btn-menu"
+              >
+                <img src="./public/icons/pdf-logo.png" alt="download CV" />
+              </a>
+            </li>
+          </ul>
+        </nav>
 
         <div class="description-container">
           <h3>Desarrollador Web con 3 años de experiencia</h3>
-          <p>Inicié con JavaScript y PHP, evolucionando hacia el uso de frameworks como Laravel para crear soluciones web eficientes y escalables.</p>
+          <p>
+            Inicié con JavaScript y PHP, evolucionando hacia el uso de
+            frameworks como Laravel para crear soluciones web eficientes y
+            escalables.
+          </p>
         </div>
-    </header>
+      </header>
 
-    <main>
-      <section class="projects-container">
-        <div class="section-title">
-          <h2>Proyectos recientes</h2>
-        </div>
-
-        <div class="project-card">
-          <div class="technologies">
-
+      <main>
+        <section class="projects-container">
+          <div class="section-title">
+            <h2>¡Del código a la realidad!</h2>
           </div>
 
-          <div class="description">
-            <img src="./public/img/imgsl1.png" alt="">
-            <div class="project-info">
-              <h4>GesiApp</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar, diam at gravida bibendum, justo quam fermentum metus, at interdum ex ligula vel neque.</p>
+          <div class="project-card">
+            <div class="project-title">
+              <h3>Trakio App</h3>
+              <div>
+                <a href="https://www.trakio.pro/" title="Visitar sitio" target="_blank">
+                  <img src="./public/icons/external-link.png" alt="external-link" width="20px">
+                </a>
+                <span title="Proyecto privado">
+                  <img
+                    src="./public/icons/padlock.png"
+                    alt="github-logo"
+                    width="20px"
+                  />
+                </span>
+              </div>
+            </div>
+
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="./public/img/projects/trakio/trakio-app.png"
+                    alt="Trakio App"
+                  />
+                </div>
+
+                <div class="swiper-slide">
+                  <img
+                    src="./public/img/projects/trakio/trakio-app2.png"
+                    alt="Trakio App"
+                  />
+                </div>
+
+                <div class="swiper-slide">
+                  <img
+                    src="./public/img/projects/trakio/trakio-app3.png"
+                    alt="Trakio App"
+                  />
+                </div>
+
+                <div class="swiper-slide">
+                  <img
+                    src="./public/img/projects/trakio/trakio-app4.png"
+                    alt="Trakio App"
+                  />
+                </div>
+              </div>
+
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="technologies"></div>
+
+            <div class="description">
+              <div class="technologies-list">
+                <span class="badge badge-yellow">JavaScript</span>
+                <span class="badge badge-red">Laravel</span>
+                <span class="badge badge-purple">Bootstrap</span>
+                <span class="badge badge-blue">SQL</span>
+              </div>
+              <div class="technologies-list-logos">
+                <img
+                  src="./public/icons/js.png"
+                  alt="javascript-logo"
+                  width="30px"
+                />
+                <img
+                  src="./public/icons/laravel.png"
+                  alt="laravel-logo"
+                  width="30px"
+                />
+                <img
+                  src="./public/icons/bootstrap.png"
+                  alt="bootstrap-logo"
+                  width="35px"
+                />
+                <img
+                  src="./public/icons/mysql.png"
+                  alt="mysql-logo"
+                  width="30px"
+                />
+              </div>
+              <p>
+                Plataforma de <b>gestión de productividad</b> diseñada para optimizar la organización
+                y el seguimiento de contratistas. Incluye <b>dashboards interactivos</b> para el
+                análisis del rendimiento y herramientas de automatización, como la generación
+                de documentos PDF.
+              </p>
+              <div class="links"> </div>
             </div>
           </div>
-        </div>
+        </section>
+      </main>
+    </div>
 
-      </section>
-    </main>
-  </div>
-  <script type="module" src="./src/js/main.js"></script>
-</body>
+    <div class="bg-body">
+      <img src="./public/img/background1.webp" alt="" />
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="./src/js/main.js"></script>
+  </body>
 </html>
