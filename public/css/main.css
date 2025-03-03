@@ -1,23 +1,24 @@
 @import url('./globals.css');
 
-.bg-body img{
-    position: absolute;
+.bg-body::before {
+    content: "";
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: -1;
     width: 100%;
-    object-fit: cover;
-    max-height: 100%;
-    filter: blur(20px);
-    -webkit-filter: blur(50px);
+    height: 100vh;
+    background-image: url('../img/background3.webp');
+    background-size: cover;
+    background-position: center;
+    filter: blur(15px);
+    -webkit-filter: blur(15px);
+    z-index: -1;
 }
 
 .main-container{
     width: 100%;
-    max-width: 1000px;
-    background-color: #171717de;
+    max-width: 1100px;
     padding: 35px 5%;
-    box-shadow: 0px 0px 20px 1px rgb(255 255 255 / 16%);
 }
 
 header{
@@ -35,11 +36,10 @@ header{
     -o-border-radius: 50%;
 }
 
-.profile-img h2{
-    width: 200px;
+.profile-img h1{
     text-align: center;
-    margin-bottom: 6%;
     color: rgba(200, 50, 50, 1);
+    margin-bottom: 10px;
 }
 
 .profile-img img{
@@ -94,6 +94,19 @@ nav a:hover{
 nav a img{
     width: 35px;
     height: 35px;
+    transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+}
+
+nav a img:hover{
+   transform: scale(1.1);
+   -webkit-transform: scale(1.1);
+   -moz-transform: scale(1.1);
+   -ms-transform: scale(1.1);
+   -o-transform: scale(1.1);
 }
 
 .dropdown a::after {
@@ -137,39 +150,54 @@ nav a img{
     margin-top: 50px;
     border-radius: 20px;
     border: 1px solid rgba(74, 87, 89, 0.4);
-    border-left: 6px solid rgba(74, 87, 89, 0.4);
-    box-shadow: 0px 0px 5px 0px rgba(74, 87, 89);
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
 }
 
+.cards-projects-container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 0px 20px; 
+    grid-template-areas: 
+      "main-project main-project"
+      "second-project third-project"; 
+}
+.main-project { grid-area: main-project; }
+.second-project { grid-area: second-project; }
+.third-project { grid-area: third-project; }
+
 .project-card{
-    border-radius: 10px;    
-    box-shadow: 13px 15px 20px 0px #000000;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 8px #ffffff12;
     transition: all ease-in-out 0.3s;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    margin-top: 20px;
     padding: 20px 3%;
+    -webkit-transition: all ease-in-out 0.3s;
+    -moz-transition: all ease-in-out 0.3s;
+    -ms-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
 }
 
 .swiper {
-    width: 80%;
+    width: 85%;
     height: 300px;
-    margin: 20px auto;
 }
 .swiper-slide {
     background: #1a1a1a;
     border-radius: 15px;
-    padding: 20px;
     box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 30px 0;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -184,14 +212,14 @@ nav a img{
     display: flex;
     justify-content: space-between;
     color: #ff4d4d;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 .project-title img{
     margin-left: 10px;
 }
-.project-description {
-    text-align: center;
-    max-width: 90%;
+.project-description {    
+    max-width: 85%;
+    margin: 30px auto;
 }
 .swiper-button-prev, .swiper-button-next {
     color: #ff4d4d;
@@ -201,8 +229,8 @@ nav a img{
 }
 
 .technologies-list{
-    margin: 15px 0;
     display: block;
+    margin-bottom: 10px;
 }
 
 .technologies-list-logos{

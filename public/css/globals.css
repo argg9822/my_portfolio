@@ -30,23 +30,28 @@ a{
 }
 
 h1{
-    font-size: 1.5em;
+    font-size: 1.6em;
     margin: 0;
 }
 
 h2{
-    font-size: 1.2em;
+    font-size: 1.4em;
+    color: rgba(150, 30, 30, 1);
 }
 
 h3{
-    font-size: 1em;
+    font-size: 1.2em;
 }
 
 p{
     line-height: 1.5;
     margin: 0;
     font-weight: 200;
+}
 
+small{
+    font-size: 0.7em;
+    margin: 0;
 }
 
 .text-center{
