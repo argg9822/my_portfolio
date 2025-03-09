@@ -1,17 +1,18 @@
-import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+function initializeBasicsSlides (){
+  const splide = new Splide('.splide', {
+    type   : 'loop',
+    drag   : 'free',
+    focus  : 'center',
+    perPage: 1,
+    autoScroll: {
+      speed: 2,
+      autoStart: true
+    },
+  });
+  
+  splide.mount();
+}
 
-new Swiper(".swiper", {
-  slidesPerView: 1,
-  spaceBetween: 30,
-  loop: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+document.addEventListener('DOMContentLoaded', function () {
+  initializeBasicsSlides();
 });
-
-

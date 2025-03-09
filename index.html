@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./public/css/main.css" />
     <title>ARGG Portfolio</title>
   </head>
@@ -78,62 +76,46 @@
 
           <div class="cards-projects-container">
             <article class="main-project project-card">
-              <div class="swiper">
-                <header class="project-title">
-                  <h3>Trakio App <small class="text-white">(Proyecto
-                      laboral)</small></h3>
-                  <div>
+              <div class="project-title">
+                <div class="flex-column">
+                  <h3>Trakio App</h3>
+                  <small class="text-white">Proyecto laboral</small>
+                </div>
+                <div class="flex-row">
+                  <div class="flex-center">
                     <a href="https://www.trakio.pro/" title="Visitar sitio"
-                      target="_blank">
-                      <img src="./public/icons/external-link.png"
-                        alt="external-link" width="20px">
+                      target="_blank" class="relative">
+                      <img class="icon absolute top-50-n left-25" src="./public/icons/arrow-up-right-from-square.svg">
                     </a>
-                    <span title="Proyecto privado">
-                      <img
-                        src="./public/icons/padlock.png"
-                        alt="github-logo"
-                        width="20px" />
+                  </div>
+
+                  <div class="flex-center">
+                    <span title="Repositorio privado" class="relative">
+                      <img class="icon absolute top-50-n left-25" src="./public/icons/lock-solid.svg">
                     </span>
                   </div>
-                </header>
-
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img
-                      src="./public/img/projects/trakio/trakio-app.png"
-                      alt="Trakio App" />
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img
-                      src="./public/img/projects/trakio/trakio-app2.png"
-                      alt="Trakio App" />
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img
-                      src="./public/img/projects/trakio/trakio-app3.png"
-                      alt="Trakio App" />
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img
-                      src="./public/img/projects/trakio/trakio-app4.png"
-                      alt="Trakio App" />
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img
-                      src="./public/img/projects/trakio/trakio-app5.png"
-                      alt="Trakio App" />
-                  </div>
                 </div>
-
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-pagination"></div>
               </div>
 
+              <div class="splide">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <img src="./public/img/projects/trakio/trakio-app.webp" alt="">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./public/img/projects/trakio/trakio-app2.webp" alt="">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./public/img/projects/trakio/trakio-app3.webp" alt="">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./public/img/projects/trakio/trakio-app4.webp" alt="">
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
               <div class="project-description">
                 <div class="technologies-list">
                   <span class="badge badge-yellow">JavaScript</span>
@@ -162,8 +144,8 @@
                 </div>
 
                 <p>
-                  Herramienta de gestión que <b>aumentó en un 60% la
-                    productividad</b>, diseñada para optimizar la organización
+                  Herramienta de gestión que <b>aumentó la
+                    productividad en un 60% </b>, diseñada para optimizar la organización
                   y el seguimiento de contratistas. Incluye <b>dashboards
                     interactivos</b> para el
                   análisis del rendimiento y herramientas de automatización,
@@ -175,48 +157,75 @@
             </article>
 
             <article class="second-project project-card">
-              <div class="swiper">
-                <header class="project-title">
-                  <h3>Formulario web<small class="text-white"> (Sanitización con PHP)</small></h3>
-                  <div>
-                    <a href="https://www.trakio.pro/" title="Visitar sitio"
-                      target="_blank">
-                      <img src="./public/icons/external-link.png"
-                        alt="external-link" width="20px">
+              <div class="project-title">
+                <div class="flex-column">
+                  <h3>Formulario web</h3>
+                  <small class="text-white">Sanitización con PHP</small>
+                </div>
+                <div class="flex-row">
+                  <div class="flex-center">
+                    <a href="https://github.com/argg9822/contact-form" title="Repositorio GitHub"
+                      target="_blank" class="relative">
+                      <img class="icon absolute top-50-n left-25" src="./public/icons/github-brands.svg">
                     </a>
-                    <span title="Proyecto privado">
-                      <img
-                        src="./public/icons/padlock.png"
-                        alt="github-logo"
-                        width="20px" />
-                    </span>
                   </div>
-                </header>
-
-                
+                </div>
               </div>
 
-            
+              <div class="image-container">
+                <img src="./public/img/projects/contact-form/form2.webp" alt="">
+              </div>
+
+              <div class="project-description">
+                <div class="technologies-list">
+                  <span class="badge badge-blue">PHP</span>
+                  <span class="badge badge-yellow">JavaScript</span>
+                  <span class="badge badge-purple">CSS</span>
+                </div>
+
+                <p>
+                  Formulario de contacto desarrollado en PHP que incluye validaciones robustas para la información ingresada por el usuario y la funcionalidad de envío de correos electrónicos.
+                </p>
+              </div>
             </article>
 
             <article class="third-project project-card">
-              <div class="swiper">
-                <header class="project-title">
+              <div class="project-title">
+                <div class="flex-column">
                   <h3>Todo App</h3>
-                  <div>
-                    <a href="https://www.trakio.pro/" title="Visitar sitio"
-                      target="_blank">
-                      <img src="./public/icons/external-link.png"
-                        alt="external-link" width="20px">
+                  <small class="text-white">Práctica</small>
+                </div>
+                <div class="flex-row">
+                  <div class="flex-row">
+                    <div class="flex-center">
+                      <a href="https://argg9822.github.io/react-todo-app/" title="Visitar sitio"
+                        target="_blank" class="relative">
+                        <img class="icon absolute top-50-n left-25" src="./public/icons/arrow-up-right-from-square.svg">
+                      </a>
+                    </div>
+  
+                    <div class="flex-center">
+                      <a href="https://github.com/argg9822/react-todo-app" title="Repositorio GitHub"
+                        target="_blank" class="relative">
+                      <img class="icon absolute top-50-n left-25" src="./public/icons/github-brands.svg">
                     </a>
-                    <span title="Proyecto privado">
-                      <img
-                        src="./public/icons/padlock.png"
-                        alt="github-logo"
-                        width="20px" />
-                    </span>
+                    </div>
                   </div>
-                </header>
+                </div>
+              </div>
+
+              <div class="image-container">
+                <img src="./public/img/projects/todoapp/todoapp.webp" alt="">
+              </div>
+
+              <div class="project-description">
+                <div class="technologies-list">
+                  <span class="badge badge-blue">React</span>                 
+                </div>
+
+                <p>
+                  Permite gestionar tareas de manera sencilla e intuitiva. Con una interfaz minimalista y dinámica, ofrece funciones como agregar, editar y eliminar tareas, brindando una experiencia fluida para organizar el día a día.
+                </p>
               </div>
             </article>
           </div>
@@ -226,8 +235,8 @@
 
     <div class="bg-body"></div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@latest/dist/js/splide-extension-auto-scroll.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>

@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    letter-spacing: 1px;
 }
 
 body{
@@ -18,7 +17,7 @@ body{
 }
 
 a{
-    text-decoration: none;
+    text-decoration: none;  
 }
 
 .text-white{
@@ -29,9 +28,16 @@ a{
     color: #000000;
 }
 
+.icon, svg {
+    width: 40px;
+    height: 40px;
+    fill: #be2727;
+}
+
 h1{
     font-size: 1.6em;
     margin: 0;
+    color: rgba(200, 50, 50, 1);
 }
 
 h2{
@@ -97,12 +103,28 @@ small{
     top: 0;
 }
 
+.top-25{
+    top: 25%;
+}
+
 .top-25-n{
     top: -25px;
 }
 
+.top-50{
+    top: 50%;
+}
+
+.top-50-n{
+    top: -50%;
+}
+
 .left-0{
     left: 0;
+}
+
+.left-25{
+    left: 25%;
 }
 
 .left-25-n{
