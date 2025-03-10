@@ -1,9 +1,5 @@
 @import url('./globals.css');
 
-*{
-    --margin-image-carousel: 25px 0;
-}
-
 .bg-body::before {
     content: "";
     position: fixed;
@@ -54,7 +50,7 @@ header{
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    box-shadow: 0px 6px 10px 3px #8686866b;
+    box-shadow: 0px 0px 0px 4px #ffffff2e;
 }
 
 .description-container{
@@ -90,7 +86,7 @@ nav a{
 }
 
 nav a:hover{
-    box-shadow: inset 1px 6px 9px 2px rgb(255 255 255 / 35%);
+    box-shadow: var(--shadow-anchor);
     margin-top: 30px;
 }
 
@@ -145,12 +141,27 @@ nav a img:hover{
     color: #ffffff;
     padding-left: 3%;
 }
+section{
+    margin-top: 30px;
+}
 
 .section-title{
     width: 100%;
-    text-align: center;
     padding: 10px 0;
-    margin-top: 50px;
+    background: linear-gradient(180deg, transparent 47%, #be272742 50%, transparent 53%);
+}
+
+.section-title h2{
+    color: #ffffff;
+    border-left: 5px solid #be272742;
+    border-right: 5px solid #be272742;
+    background-color: #000000;
+    padding: 5px 4%;
+    border-radius: 30rem;
+    -webkit-border-radius: 30rem;
+    -moz-border-radius: 30rem;
+    -ms-border-radius: 30rem;
+    -o-border-radius: 30rem;
 }
 
 .cards-projects-container {
@@ -167,8 +178,9 @@ nav a img:hover{
 .third-project { grid-area: third-project; }
 
 .project-card{
+    position: relative;
     border-radius: 10px;
-    box-shadow: 0px 0px 20px 8px #ffffff12;
+    box-shadow: 0px 0px 12px 3px #ffffff12;
     transition: all ease-in-out 0.3s;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -182,15 +194,26 @@ nav a img:hover{
     -o-transition: all ease-in-out 0.3s;
 }
 
+.project-card:hover{
+    transform: scale(1.01);
+    -webkit-transform: scale(1.01);
+    -moz-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    -o-transform: scale(1.01);
+}
+
 .image-container{
     overflow: hidden;
     max-width: 100%;
-    margin: var(--margin-image-carousel);
+    margin: var(--standard-margin);
 }
 
 .image-container img{
     max-width: 100%;
     object-fit: contain;
+}
+.splide{
+    margin: var(--standard-margin);
 }
 .splide__track {
     background: #1a1a1a;
@@ -200,7 +223,6 @@ nav a img:hover{
     justify-content: center;
     align-items: center;
     max-height: 300px;
-    margin: var(--margin-image-carousel);
     transition: transform 0.3s ease-in-out;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -221,7 +243,7 @@ nav a img:hover{
 }
 
 .splide__arrow svg {
-    fill: #BE2727;
+    fill: var(--primary-color);
     height: 2.2em;
     width: 2.2em;
 }
@@ -230,13 +252,12 @@ nav a img:hover{
     background: #be272794;
 }
 .splide__pagination__page.is-active{
-    background: #BE2727;
+    background: var(--primary-color);
 }
 
 .project-title {
     display: flex;
     justify-content: space-between;
-    color: #ff4d4d;
 }
 
 .project-title a,
@@ -262,7 +283,12 @@ nav a img:hover{
 
 .project-title a:hover{
     cursor: pointer;
-    box-shadow: inset 0px 8px 9px 2px rgb(255 255 255 / 22%);
+    box-shadow: var(--shadow-anchor);
+}
+
+.project-title .icon{
+    top: -35%;
+    left: 25%;
 }
 
 .project-title a:hover .icon{
@@ -272,7 +298,6 @@ nav a img:hover{
 .technologies-list{
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 10px;
 }
 
 .technologies-list-logos{
@@ -311,8 +336,13 @@ nav a img:hover{
         flex-direction: column;
     }
 
+    .project-description .text-muted{
+        font-size: 0.8em;
+    }
+
     .technologies-list-logos{
-        display: block;
+        display: flex;
+        gap: 5px;
     }
 
     .technologies-list{

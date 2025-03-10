@@ -5,6 +5,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --standard-margin: 25px 0;
+    --standard-margin-bottom: 25px;
+    --shadow-anchor: inset 0px 6px 9px 2px rgb(207 0 0 / 39%);
+    --primary-color: #BE2727;
 }
 
 body{
@@ -17,7 +21,13 @@ body{
 }
 
 a{
-    text-decoration: none;  
+    text-decoration: none;
+    color: #fc8888;
+    font-weight: 700;
+}
+
+a:hover{
+    text-decoration: underline;
 }
 
 .text-white{
@@ -31,7 +41,6 @@ a{
 .icon, svg {
     width: 40px;
     height: 40px;
-    fill: #be2727;
 }
 
 h1{
@@ -47,12 +56,14 @@ h2{
 
 h3{
     font-size: 1.2em;
+    color: #ff4d4d;
 }
 
 p{
     line-height: 1.5;
     margin: 0;
     font-weight: 200;
+    font-size: 0.9em;
 }
 
 small{
@@ -62,6 +73,10 @@ small{
 
 .text-center{
     text-align: center;
+}
+
+.text-muted{
+    color: #ffffff4f;
 }
 
 .flex-center{
@@ -119,6 +134,10 @@ small{
     top: -50%;
 }
 
+.top-75-n{
+    top: -75%;
+}
+
 .left-0{
     left: 0;
 }
@@ -149,6 +168,10 @@ small{
 
 ul{
     list-style-type: none;
+}
+
+.std-mb{
+    margin-bottom: var(--standard-margin-bottom);
 }
 
 .badge{
@@ -184,4 +207,14 @@ ul{
 
 .badge-yellow{
     background-color: #ad8200;
+}
+
+/*
+    Responsive design for smaller screens (Mobile) 767px or less than that.
+*/
+
+@media (max-width: 767px) {
+    *{
+        --standard-margin-bottom: 15px;
+    }
 }

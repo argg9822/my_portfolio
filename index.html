@@ -3,12 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./public/css/main.css" />
     <title>ARGG Portfolio</title>
   </head>
+
   <body>
-    <div class="main-container">
+    <div class="main-container" id="app">
       <header>
         <div class="profile-img flex-column flex-start">
           <h1>Aramis Garcia</h1>
@@ -16,7 +20,8 @@
             <object
               type="image/svg+xml"
               class="absolute top-0 left-0"
-              data="./public/icons/profile-light.svg"></object>
+              data="./public/icons/profile-light.svg"
+            ></object>
             <img src="./public/img/profile-img.png" alt />
           </div>
         </div>
@@ -28,10 +33,12 @@
                 href="https://www.linkedin.com/in/argg-dev"
                 title="Perfil de LinkedIn"
                 target="_blank"
-                id="btn-menu">
+                id="btn-menu"
+              >
                 <img
                   src="./public/icons/linkedin-logo.png"
-                  alt="linkedin-logo" />
+                  alt="linkedin-logo"
+                />
               </a>
             </li>
             <li>
@@ -39,7 +46,8 @@
                 href="https://github.com/argg9822"
                 title="Perfil de Github"
                 target="_blank"
-                id="btn-menu">
+                id="btn-menu"
+              >
                 <img src="./public/icons/github-logo.png" alt="github-logo" />
               </a>
             </li>
@@ -48,7 +56,8 @@
                 href="https://github.com/argg9822"
                 title=" Descargar CV"
                 target="_blank"
-                id="btn-menu">
+                id="btn-menu"
+              >
                 <img src="./public/icons/pdf-logo.png" alt="download CV" />
               </a>
             </li>
@@ -56,21 +65,20 @@
         </nav>
 
         <div class="description-container">
-          <h3>Desarrollador Web con 3 años de experiencia</h3>
+          <h2>Desarrollador Web con 3 años de experiencia</h2>
           <p>
-            Me especializo en el desarrollo de soluciones web con el stack
-            JavaScript -
-            PHP - SQL, usando Laravel en backend, React en frontend y Bootstrap
-            para
-            interfaces modernas y responsivas.
+            La mayor parte de mi experiencia se centra en el stack Laravel, SQL,
+            JavaScript y Bootstrap para el desarrollo de aplicaciones
+            interactivas, dinámicas y adaptativas, pasando por el desarrollo de
+            aplicaciones sin frameworks, con PHP, JavaScript, CSS y HTML
+            puro.
           </p>
-
         </div>
       </header>
 
       <main>
         <section>
-          <div class="section-title">
+          <div class="section-title flex-center">
             <h2>Portafolio</h2>
           </div>
 
@@ -83,15 +91,25 @@
                 </div>
                 <div class="flex-row">
                   <div class="flex-center">
-                    <a href="https://www.trakio.pro/" title="Visitar sitio"
-                      target="_blank" class="relative">
-                      <img class="icon absolute top-50-n left-25" src="./public/icons/arrow-up-right-from-square.svg">
+                    <a
+                      href="https://www.trakio.pro/"
+                      title="Visitar sitio"
+                      target="_blank"
+                      class="relative"
+                    >
+                      <img
+                        class="icon absolute"
+                        src="./public/icons/arrow-up-right-from-square.svg"
+                      />
                     </a>
                   </div>
 
                   <div class="flex-center">
                     <span title="Repositorio privado" class="relative">
-                      <img class="icon absolute top-50-n left-25" src="./public/icons/lock-solid.svg">
+                      <img
+                        class="icon absolute"
+                        src="./public/icons/lock-solid.svg"
+                      />
                     </span>
                   </div>
                 </div>
@@ -101,56 +119,77 @@
                 <div class="splide__track">
                   <ul class="splide__list">
                     <li class="splide__slide">
-                      <img src="./public/img/projects/trakio/trakio-app.webp" alt="">
+                      <img
+                        src="./public/img/projects/trakio/trakio-app.webp"
+                        alt="Trakio App"
+                      />
                     </li>
                     <li class="splide__slide">
-                      <img src="./public/img/projects/trakio/trakio-app2.webp" alt="">
+                      <img
+                        src="./public/img/projects/trakio/trakio-app2.webp"
+                        alt="Trakio App"
+                      />
                     </li>
                     <li class="splide__slide">
-                      <img src="./public/img/projects/trakio/trakio-app3.webp" alt="">
+                      <img
+                        src="./public/img/projects/trakio/trakio-app3.webp"
+                        alt="Trakio App"
+                      />
                     </li>
                     <li class="splide__slide">
-                      <img src="./public/img/projects/trakio/trakio-app4.webp" alt="">
+                      <img
+                        src="./public/img/projects/trakio/trakio-app4.webp"
+                        alt="Trakio App"
+                      />
                     </li>
                   </ul>
                 </div>
               </div>
-              
-              <div class="project-description">
-                <div class="technologies-list">
-                  <span class="badge badge-yellow">JavaScript</span>
-                  <span class="badge badge-red">Laravel</span>
-                  <span class="badge badge-purple">Bootstrap</span>
-                  <span class="badge badge-blue">SQL</span>
-                </div>
 
-                <div class="technologies-list-logos">
-                  <img
-                    src="./public/icons/js.png"
-                    alt="javascript-logo"
-                    width="30px" />
-                  <img
-                    src="./public/icons/laravel.png"
-                    alt="laravel-logo"
-                    width="30px" />
-                  <img
-                    src="./public/icons/bootstrap.png"
-                    alt="bootstrap-logo"
-                    width="35px" />
-                  <img
-                    src="./public/icons/mysql.png"
-                    alt="mysql-logo"
-                    width="30px" />
+              <div class="project-description">
+                <div class="flex-between std-mb">
+                  <div class="technologies-list">
+                    <span class="badge badge-yellow">JavaScript</span>
+                    <span class="badge badge-red">Laravel</span>
+                    <span class="badge badge-purple">Bootstrap</span>
+                    <span class="badge badge-blue">SQL</span>
+                  </div>
+
+                  <div class="technologies-list-logos">
+                    <img
+                      src="./public/icons/js.png"
+                      alt="javascript-logo"
+                      width="30px"
+                    />
+                    <img
+                      src="./public/icons/laravel.png"
+                      alt="laravel-logo"
+                      width="30px"
+                    />
+                    <img
+                      src="./public/icons/bootstrap.png"
+                      alt="bootstrap-logo"
+                      width="35px"
+                    />
+                    <img
+                      src="./public/icons/mysql.png"
+                      alt="mysql-logo"
+                      width="30px"
+                    />
+                  </div>
+
+                  <div class="text-muted">
+                    <time datetime="2022-08-15">Ago 2022</time> - Actualidad
+                  </div>
                 </div>
 
                 <p>
-                  Herramienta de gestión que <b>aumentó la
-                    productividad en un 60% </b>, diseñada para optimizar la organización
-                  y el seguimiento de contratistas. Incluye <b>dashboards
-                    interactivos</b> para el
-                  análisis del rendimiento y herramientas de automatización,
-                  como la generación
-                  de documentos PDF.
+                  Herramienta de gestión que
+                  <b>aumentó la productividad en un 60% </b>, diseñada para
+                  optimizar la organización y el seguimiento de contratistas.
+                  Incluye <b>dashboards interactivos</b> para el análisis del
+                  rendimiento y herramientas de automatización, como la
+                  generación de documentos PDF.
                 </p>
                 <div class="links"></div>
               </div>
@@ -164,27 +203,58 @@
                 </div>
                 <div class="flex-row">
                   <div class="flex-center">
-                    <a href="https://github.com/argg9822/contact-form" title="Repositorio GitHub"
-                      target="_blank" class="relative">
-                      <img class="icon absolute top-50-n left-25" src="./public/icons/github-brands.svg">
+                    <a
+                      href="https://github.com/argg9822/contact-form"
+                      title="Repositorio GitHub"
+                      target="_blank"
+                      class="relative"
+                    >
+                      <img
+                        class="icon absolute"
+                        src="./public/icons/github-brands.svg"
+                      />
                     </a>
                   </div>
                 </div>
               </div>
 
-              <div class="image-container">
-                <img src="./public/img/projects/contact-form/form2.webp" alt="">
-              </div>
+              <figure class="image-container">
+                <img
+                  src="./public/img/projects/contact-form/form2.webp"
+                  alt=""
+                />
+              </figure>
 
               <div class="project-description">
-                <div class="technologies-list">
-                  <span class="badge badge-blue">PHP</span>
-                  <span class="badge badge-yellow">JavaScript</span>
-                  <span class="badge badge-purple">CSS</span>
+                <div class="flex-between std-mb">
+                  <div class="technologies-list">
+                    <span class="badge badge-blue">PHP</span>
+                    <span class="badge badge-yellow">JavaScript</span>
+                    <span class="badge badge-purple">CSS</span>
+                  </div>
+
+                  <div class="technologies-list-logos">
+                    <img
+                      src="./public/icons/mysql.png"
+                      alt="mysql-logo"
+                      width="30px"
+                    />
+                    <img
+                      src="./public/icons/php-logo.png"
+                      alt="PHP-logo"
+                      width="30px"
+                    />
+                  </div>
+
+                  <div class="text-muted">
+                    <time datetime="2023">2023</time>
+                  </div>
                 </div>
 
                 <p>
-                  Formulario de contacto desarrollado en PHP que incluye validaciones robustas para la información ingresada por el usuario y la funcionalidad de envío de correos electrónicos.
+                  Formulario de contacto desarrollado en PHP, que implementa
+                  medidas de seguridad en el backend para prevenir ataques como
+                  XSS, inyecciones HTML, entre otros.
                 </p>
               </div>
             </article>
@@ -192,43 +262,94 @@
             <article class="third-project project-card">
               <div class="project-title">
                 <div class="flex-column">
-                  <h3>Todo App</h3>
+                  <h3>To-do App</h3>
                   <small class="text-white">Práctica</small>
                 </div>
+              
                 <div class="flex-row">
-                  <div class="flex-row">
-                    <div class="flex-center">
-                      <a href="https://argg9822.github.io/react-todo-app/" title="Visitar sitio"
-                        target="_blank" class="relative">
-                        <img class="icon absolute top-50-n left-25" src="./public/icons/arrow-up-right-from-square.svg">
-                      </a>
-                    </div>
-  
-                    <div class="flex-center">
-                      <a href="https://github.com/argg9822/react-todo-app" title="Repositorio GitHub"
-                        target="_blank" class="relative">
-                      <img class="icon absolute top-50-n left-25" src="./public/icons/github-brands.svg">
+                  <div class="flex-center">
+                    <a
+                      href="https://argg9822.github.io/react-todo-app/"
+                      title="Visitar sitio"
+                      target="_blank"
+                      class="relative"
+                    >
+                      <img
+                        class="icon absolute"
+                        src="./public/icons/arrow-up-right-from-square.svg"
+                      />
                     </a>
-                    </div>
+                  </div>
+
+                  <div class="flex-center">
+                    <a
+                      href="https://github.com/argg9822/react-todo-app"
+                      title="Repositorio GitHub"
+                      target="_blank"
+                      class="relative"
+                    >
+                      <img
+                        class="icon absolute"
+                        src="./public/icons/github-brands.svg"
+                      />
+                    </a>
                   </div>
                 </div>
               </div>
 
-              <div class="image-container">
-                <img src="./public/img/projects/todoapp/todoapp.webp" alt="">
-              </div>
+              <figure class="image-container">
+                <img src="./public/img/projects/todoapp/todoapp.webp" alt="" />
+              </figure>
 
               <div class="project-description">
-                <div class="technologies-list">
-                  <span class="badge badge-blue">React</span>                 
+                <div class="flex-between std-mb">
+                  <div class="technologies-list">
+                    <span class="badge badge-blue">React</span>
+                  </div>
+
+                  <div class="technologies-list-logos">
+                    <img
+                      src="./public/icons/react-logo.webp"
+                      alt="javascript-logo"
+                      width="30px"
+                    />
+                  </div>
+
+                  <div class="text-muted">
+                    <time datetime="2024">2024</time>
+                  </div>
                 </div>
 
                 <p>
-                  Permite gestionar tareas de manera sencilla e intuitiva. Con una interfaz minimalista y dinámica, ofrece funciones como agregar, editar y eliminar tareas, brindando una experiencia fluida para organizar el día a día.
+                  En proceso de desarrollo, permite gestionar tareas de manera
+                  sencilla e intuitiva, de manera que se conecte al calendario
+                  de Google y genere recordatorios, además de fechas límite para
+                  cada tarea.
                 </p>
               </div>
             </article>
           </div>
+        </section>
+
+        <section>
+          <div class="section-title flex-center">
+            <h2>Experiencia</h2>
+          </div>
+
+          <article class="project-card">
+            <div class="flex-column std-mb">
+              <h3>Desarrollador web</h3>
+              <small class="text-white">Subred integrada de servicios de salud Norte</small>
+            </div>
+
+            <p>
+              Diseño e implementación de la aplicación web
+              <a href="https://www.trakio.pro">Trakio pro</a> que permitió gestionar de
+              manera efectiva la productividad y el talento humano.
+            </p>
+
+            <p>Aumentó en un <em>60%</em> la productividad de cada uno de los colaboradores</p>
+          </article>
         </section>
       </main>
     </div>
