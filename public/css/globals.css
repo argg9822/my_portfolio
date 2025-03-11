@@ -5,10 +5,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --max-width-page: 850px;
     --standard-margin: 25px 0;
     --standard-margin-bottom: 25px;
     --shadow-anchor: inset 0px 6px 9px 2px rgb(207 0 0 / 39%);
     --primary-color: #BE2727;
+    --color-links: #fc8888;
 }
 
 body{
@@ -22,7 +24,7 @@ body{
 
 a{
     text-decoration: none;
-    color: #fc8888;
+    color: var(--color-links);
     font-weight: 700;
 }
 
@@ -100,6 +102,12 @@ small{
     align-items: center;
 }
 
+.flex-start{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .flex-row{
     display: flex;
     flex-direction: row;
@@ -164,6 +172,10 @@ small{
 
 .w-50{
     width: 50%;
+}
+
+.gap-1{
+    gap: 1rem;
 }
 
 .transition-all{

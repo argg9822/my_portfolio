@@ -17,8 +17,8 @@
 
 .main-container{
     width: 100%;
-    max-width: 1100px;
-    padding: 35px 5%;
+    max-width: var(--max-width-page);
+    padding: 35px 0;
 }
 
 header{
@@ -108,6 +108,62 @@ nav a img:hover{
    -o-transform: scale(1.1);
 }
 
+.scroll-nav{
+    position: fixed;
+    top: -100px;
+    width: 100%;
+    max-width: var(--max-width-page);
+    background: linear-gradient(to bottom, rgb(14 0 0 / 90%), rgb(73 0 0 / 89%));
+    border-radius: 20rem 2rem 20rem 2rem;
+    -webkit-border-radius: 20rem 2rem 20rem 2rem;
+    -moz-border-radius: 20rem 2rem 20rem 2rem;
+    -ms-border-radius: 20rem 2rem 20rem 2rem;
+    -o-border-radius: 20rem 2rem 20rem 2rem;
+    z-index: 100;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.scroll-nav.active{
+    top: 1%;
+    padding: 10px;
+}
+
+.scroll-nav ul{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.scroll-nav ul li a{
+    color: #fff;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.nav-links.active{
+    background-color: rgba(191, 0, 0, 0.52);
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+.nav-links:hover{
+    text-decoration: none;
+    border-radius: 0;
+    box-shadow: 0 0 6px rgba(191, 0, 0, 0.52);
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
 .dropdown a::after {
     content: "";
     border: solid #ffffff;
@@ -177,7 +233,7 @@ section{
 .second-project { grid-area: second-project; }
 .third-project { grid-area: third-project; }
 
-.project-card{
+.card{
     position: relative;
     border-radius: 10px;
     box-shadow: 0px 0px 12px 3px #ffffff12;
@@ -194,7 +250,7 @@ section{
     -o-transition: all ease-in-out 0.3s;
 }
 
-.project-card:hover{
+.card:hover{
     transform: scale(1.01);
     -webkit-transform: scale(1.01);
     -moz-transform: scale(1.01);
@@ -327,7 +383,7 @@ section{
         justify-content: space-between;
     }
 
-    .project-card{
+    .card{
         padding: 20px;
     }
 

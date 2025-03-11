@@ -12,6 +12,13 @@
   </head>
 
   <body>
+    <nav class="scroll-nav">
+      <ul>
+        <li><a href="#section-projects" class="nav-links">Proyectos</a></li>
+        <li><a href="#section-experience" class="nav-links">Experiencia</a></li>
+        <li><a href="#section-contact" class="nav-links">Contacto</a></li>
+      </ul>
+    </nav>
     <div class="main-container" id="app">
       <header>
         <div class="profile-img flex-column flex-start">
@@ -77,13 +84,13 @@
       </header>
 
       <main>
-        <section>
+        <section id="section-projects">
           <div class="section-title flex-center">
             <h2>Portafolio</h2>
           </div>
 
           <div class="cards-projects-container">
-            <article class="main-project project-card">
+            <article class="main-project card">
               <div class="project-title">
                 <div class="flex-column">
                   <h3>Trakio App</h3>
@@ -179,7 +186,7 @@
                   </div>
 
                   <div class="text-muted">
-                    <time datetime="2022-08-15">Ago 2022</time> - Actualidad
+                    <time datetime="2022-08-15">2022</time> - Actualidad
                   </div>
                 </div>
 
@@ -195,7 +202,7 @@
               </div>
             </article>
 
-            <article class="second-project project-card">
+            <article class="second-project card">
               <div class="project-title">
                 <div class="flex-column">
                   <h3>Formulario web</h3>
@@ -259,7 +266,7 @@
               </div>
             </article>
 
-            <article class="third-project project-card">
+            <article class="third-project card">
               <div class="project-title">
                 <div class="flex-column">
                   <h3>To-do App</h3>
@@ -331,17 +338,23 @@
           </div>
         </section>
 
-        <section>
+        <section id="section-experience">
           <div class="section-title flex-center">
             <h2>Experiencia</h2>
           </div>
 
-          <article class="project-card">
-            <div class="flex-column std-mb">
-              <h3>Desarrollador web</h3>
-              <small class="text-white">Subred integrada de servicios de salud Norte</small>
-            </div>
+          <article class="card">
+            <div class="flex-between">
+              <div class="flex-column std-mb">
+                <h3>Desarrollador web</h3>
+                <small class="text-white">Subred integrada de servicios de salud Norte</small>
+              </div>
 
+              <div class="text-muted">
+                <time datetime="2022-01-21">2022</time> - Actualidad
+              </div>
+            </div>
+            
             <p>
               Diseño e implementación de la aplicación web
               <a href="https://www.trakio.pro">Trakio pro</a> que permitió gestionar de
@@ -349,6 +362,51 @@
             </p>
 
             <p>Aumentó en un <em>60%</em> la productividad de cada uno de los colaboradores</p>
+          </article>
+
+          <article class="card">
+            <div class="flex-between">
+              <div class="flex-column std-mb">
+                <h3>Técnico de sistemas</h3>
+                <small class="text-white">PST de Colombia</small>
+              </div>
+
+              <div class="text-muted">
+                <time datetime="2017-11-21/2022-01-21">2017 - 2022</time>
+              </div>
+            </div>
+
+            <p>
+              También he tenido la oportunidad de desempeñarme en el área de soporte técnico, lo que me ha ayudaddo a ser más versátil como desarrollador web.
+            </p>
+          </article>
+        </section>
+
+        <section id="section-contact">
+          <div class="section-title flex-center">
+            <h2>Contáctame</h2>
+          </div>
+
+          <article class="card flex-column gap-1">
+            <div class="flex-start gap-1">
+                <!-- icon -->
+                 <img
+                  src="./public/icons/envelope-solid.svg"
+                  alt="email-icon"
+                  width="24px"
+                />
+                <span class="text-white">argg9822@gmail.com</span>
+            </div>
+
+            <div class="flex-start gap-1">
+                <!-- icon -->
+                <img
+                  src="./public/icons/linkedin-brands.svg"
+                  alt="phone-icon"
+                  width="24px"
+                />
+                <a href="https://www.linkedin.com/in/argg-dev" target="_blank" class="text-white">Aramis García </a>
+            </div>
           </article>
         </section>
       </main>

@@ -1,3 +1,11 @@
+document.addEventListener('DOMContentLoaded', function () {
+  initializeBasicsSlides();
+  window.addEventListener('scroll', rebaseTopMenu);
+  menu();
+});
+
+const NAV_LINKS = document.querySelector('.scroll-nav');
+
 function initializeBasicsSlides (){
   const splide = new Splide('.splide', {
     type   : 'loop',
@@ -14,19 +22,41 @@ function initializeBasicsSlides (){
 }
 
 function rebaseTopMenu(){
-  console.log("Scrolling")
-  const mainContainer = document.getElementById('app');
-  const titles = document.getElementsByClassName('section-title');
+  const scrollNav = document.querySelector('.scroll-nav');
+  if (window.scrollY > 300) {
+    scrollNav.classList.add('active');
+  }else{
+    scrollNav.classList.remove('active');
+  }
 
-  Array.from(titles).forEach(title => {
-    console.log(title.getBoundingClientRect().top);
-    
-  });
-  console.log(mainContainer.getBoundingClientRect().top);
+  const scrollSectionActive = () => {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      if (window.scrollY + 50 >= sectionTop && window.scrollY + 50 < sectionTop + sectionHeight) {
+        removeClassLinks();
+        const button = document.querySelector(`a[href="#${section.id}"]`);
+        button.classList.add('active');
+      }
+    })
+  }
+
+  scrollSectionActive();
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  initializeBasicsSlides();
-});
+function removeClassLinks () {
+  NAV_LINKS.querySelectorAll('.nav-links').forEach(link => {
+    link.classList.remove('active');
+  });
+}
 
-document.addEventListener('scroll', rebaseTopMenu());
+function menu(){
+  NAV_LINKS.addEventListener('click', (e) => {
+    const button = e.target;
+    if (button.classList.contains('nav-links')){
+      removeClassLinks();
+      button.classList.add('active');
+    }
+  }); 
+}
