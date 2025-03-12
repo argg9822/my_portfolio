@@ -360,6 +360,14 @@ section{
     display: none;
 }
 
+.skills-container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 /*
     Responsive design for smaller screens (Mobile) 767px or less than that.
 */
