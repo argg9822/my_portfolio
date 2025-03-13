@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,12 +14,14 @@
   <body>
     <nav class="scroll-nav">
       <ul>
-        <li><a href="#section-projects" class="nav-links">Proyectos</a></li>
-        <li><a href="#section-experience" class="nav-links">Experiencia</a></li>
-        <li><a href="#section-contact" class="nav-links">Contacto</a></li>
-        <li><a href="#section-skills" class="nav-links">Conocimientos</a></li>
+        <li><a href="#projects" class="nav-links">Proyectos</a></li>
+        <li><a href="#experience" class="nav-links">Experiencia</a></li>
+        <li><a href="#skills" class="nav-links">Conocimientos</a></li>
+        <li><a href="#certifications" class="nav-links">Certificaciones</a></li>
+        <li><a href="#contact" class="nav-links">Contacto</a></li>
       </ul>
     </nav>
+    
     <div class="main-container" id="app">
       <header>
         <div class="profile-img flex-column flex-start">
@@ -41,10 +43,9 @@
                 href="https://www.linkedin.com/in/argg-dev"
                 title="Perfil de LinkedIn"
                 target="_blank"
-                id="btn-menu"
               >
                 <img
-                  src="./public/icons/linkedin-logo.png"
+                  src="./public/icons/linkedin-logo.webp"
                   alt="linkedin-logo"
                 />
               </a>
@@ -54,19 +55,16 @@
                 href="https://github.com/argg9822"
                 title="Perfil de Github"
                 target="_blank"
-                id="btn-menu"
               >
-                <img src="./public/icons/github-logo.png" alt="github-logo" />
+                <img src="./public/icons/github-logo.webp" alt="github-logo" />
               </a>
             </li>
             <li>
               <a
-                href="https://github.com/argg9822"
                 title=" Descargar CV"
                 target="_blank"
-                id="btn-menu"
               >
-                <img src="./public/icons/pdf-logo.png" alt="download CV" />
+                <img src="./public/icons/pdf-logo.webp" alt="download CV" />
               </a>
             </li>
           </ul>
@@ -85,7 +83,7 @@
       </header>
 
       <main>
-        <section id="section-projects">
+        <section id="projects">
           <div class="section-title flex-center">
             <h2>Portafolio</h2>
           </div>
@@ -165,22 +163,22 @@
 
                   <div class="technologies-list-logos">
                     <img
-                      src="./public/icons/js.png"
+                      src="./public/icons/js.webp"
                       alt="javascript-logo"
                       width="30px"
                     />
                     <img
-                      src="./public/icons/laravel.png"
+                      src="./public/icons/laravel.webp"
                       alt="laravel-logo"
                       width="30px"
                     />
                     <img
-                      src="./public/icons/bootstrap.png"
+                      src="./public/icons/bootstrap.webp"
                       alt="bootstrap-logo"
                       width="35px"
                     />
                     <img
-                      src="./public/icons/mysql.png"
+                      src="./public/icons/mysql.webp"
                       alt="mysql-logo"
                       width="30px"
                     />
@@ -243,12 +241,12 @@
 
                   <div class="technologies-list-logos">
                     <img
-                      src="./public/icons/mysql.png"
+                      src="./public/icons/mysql.webp"
                       alt="mysql-logo"
                       width="30px"
                     />
                     <img
-                      src="./public/icons/php-logo.png"
+                      src="./public/icons/php-logo.webp"
                       alt="PHP-logo"
                       width="30px"
                     />
@@ -339,7 +337,7 @@
           </div>
         </section>
 
-        <section id="section-experience">
+        <section id="experience">
           <div class="section-title flex-center">
             <h2>Experiencia</h2>
           </div>
@@ -383,25 +381,64 @@
           </article>
         </section>
 
-        <section id="section-skills">
+        <section id="skills">
           <div class="section-title flex-center">
             <h2>Conocimientos</h2>
           </div>
 
           <div class="skills-container">
             <article class="card">
-              <h3>Con dominio</h3>
-            </article>
+              <h3>Tecnologías que domino</h3>
+              <div class="tech-grid std-mb">
+                <div class="tech"> <img src="./public/icons/html5-logo.png" alt="HTML"> HTML </div>
+                <div class="tech"> <img src="./public/icons/css3.png" alt="CSS"> CSS </div>
+                <div class="tech"> <img src="./public/icons/bootstrap.webp" alt="Bootstrap"> Bootstrap </div>
+                <div class="tech"> <img src="./public/icons/js.webp" alt="JavaScript"> JavaScript </div>
+                <div class="tech"> <img src="./public/icons/php-logo.webp" alt="PHP"> PHP </div>
+                <div class="tech"> <img src="./public/icons/laravel.webp" alt="Laravel"> Laravel </div>
+                <div class="tech"> <img src="./public/icons/mysql.webp" alt="SQL"> SQL </div>
+                <div class="tech"> <img src="./public/icons/github-logo.webp" alt="GitHub"> GitHub </div>                
+              </div>
 
-            <article class="card">
-              <h3>Aprendiendo</h3>
+              <h3>En proceso de aprendizaje</h3>
+              <div class="tech-grid">
+                <div class="tech"> <img src="./public/icons/react-logo.webp" alt="React"> React </div>
+                <div class="tech"> <img src="./public/icons/typescript-logo.webp" alt="TypeScript"> TypeScript </div>
+                <div class="tech"> <img src="./public/icons/nextjs.png" alt="Next JS"> Next JS </div>
+              </div>
             </article>
-            
           </div>
           
         </section>
 
-        <section id="section-contact">
+        <section id="certifications">
+          <div class="section-title flex-center">
+            <h2>Certificaciones y estudios</h2>
+          </div>
+
+          <article class="card certifications-container">
+            <h3>Certificaciones</h3>
+            <div class="cert-grid std-mb">
+              <div class="cert">
+                <img src="./public/img/certifications/diagramacionCss.png" alt="Diagramacion con CSS">
+                <p>Diagramacion con CSS</p>
+                <small>NextU - 2023</small>
+              </div>
+              <div class="cert">
+                <img src="./public/img/certifications/mysql.png" alt="MySQL">
+                <p>MySQL</p>
+                <small>Platzi - 2023</small>
+              </div>
+            </div>
+        
+            <h3>Estudios</h3>
+            <div class="study">
+              <p>Actualmente cursando <strong>5to semestre</strong> de Ingeniería de Sistemas.</p>
+            </div>
+          </article>
+        </section>
+
+        <section id="contact">
           <div class="section-title flex-center">
             <h2>Contáctame</h2>
           </div>

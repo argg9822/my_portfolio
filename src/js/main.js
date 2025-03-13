@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initializeBasicsSlides();
   window.addEventListener('scroll', rebaseTopMenu);
   menu();
+  scaleImageCerts();
 });
 
 const NAV_LINKS = document.querySelector('.scroll-nav');
@@ -59,4 +60,21 @@ function menu(){
       button.classList.add('active');
     }
   }); 
+}
+
+function scaleImageCerts (){
+  const scale = (image) => {
+    image.classList.toggle('scale');
+  }
+  
+  const container = document.querySelector('.cert-grid');
+  container.addEventListener('click', (e) => {
+    const img = e.target.firstChild;
+    if(img){
+      scale(img.nextElementSibling);
+    }else{
+      scale(e.target);
+    }
+  });
+  
 }
