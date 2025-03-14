@@ -61,20 +61,3 @@ function menu(){
     }
   }); 
 }
-
-function scaleImageCerts (){
-  const scale = (image) => {
-    image.classList.toggle('scale');
-  }
-  
-  const container = document.querySelector('.cert-grid');
-  container.addEventListener('click', (e) => {
-    const img = e.target.firstChild;
-    if(img){
-      scale(img.nextElementSibling);
-    }else{
-      scale(e.target);
-    }
-  });
-  
-}

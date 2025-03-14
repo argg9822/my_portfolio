@@ -66,13 +66,19 @@ header {
     grid-column-start: 2;
 }
 
+.nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
 .nav-container ul {
     display: flex;
     justify-content: flex-end;
-}
-
-.nav-container ul li {
-    margin-left: 20px;
+    gap: 20px;
 }
 
 nav a {
@@ -208,7 +214,7 @@ nav a img:hover {
 }
 
 section {
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 .section-title {
@@ -233,7 +239,6 @@ section {
 .cards-projects-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     gap: 0px 20px;
     grid-template-areas:
         "main-project main-project"
@@ -387,9 +392,16 @@ section {
 .tech-grid,
 .cert-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 15px;
     text-align: center;
+}
+
+.tech-grid{
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.cert-grid{
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
 }
 
 .tech,
@@ -439,14 +451,10 @@ section {
     -o-transition: all ease-in-out 0.5s;
 }
 
-.cert img.scale{
-    top: 10vh;
-    left: 40%;
-    transform: scale(4);
-    -webkit-transform: scale(4);
-    -moz-transform: scale(4);
-    -ms-transform: scale(4);
-    -o-transform: scale(4);
+.cert.scale{
+    top: 0;
+    width: 100%;
+    height: auto;
     position: absolute;
     
 }
@@ -473,9 +481,17 @@ section {
         justify-content: center;
     }
 
+    .scroll-nav{
+        display: none;
+    }
+
     .nav-container {
         width: 100%;
         margin: 13px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 10px;        
     }
 
     .nav-container ul {
@@ -487,8 +503,13 @@ section {
         padding: var(--mobile-padding);
     }
 
+    section{
+        margin-top: var(--mobile-padding);
+    }
+
     .card {
         padding: var(--mobile-padding);
+        box-shadow: inset 0px 0px 5px 4px #ffffff12;
     }
 
     .cards-projects-container {
