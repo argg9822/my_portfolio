@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', rebaseTopMenu);
   menu();
   scaleImageCerts();
+  startCarouselTechs();
 });
 
 const NAV_LINKS = document.querySelector('.scroll-nav');
@@ -60,4 +61,13 @@ function menu(){
       button.classList.add('active');
     }
   }); 
+}
+
+function startCarouselTechs(){
+  const track = document.querySelector('.track');
+  const carousel = document.querySelector('.tech-carousel');
+
+  if (track.scrollWidth <= carousel.clientWidth) {
+    track.style.animation = 'none';
+  }
 }

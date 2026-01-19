@@ -58,6 +58,7 @@ h1{
 
 h2{
     font-size: 1.4em;
+    margin-bottom: .4em;
     color: rgba(150, 30, 30, 1);
 }
 
@@ -237,5 +238,9 @@ ul{
 @media (max-width: 767px) {
     *{
         --standard-margin-bottom: 15px;
+    }
+
+    h2{
+        
     }
 }
