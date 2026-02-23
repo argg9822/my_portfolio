@@ -259,7 +259,8 @@ section {
     gap: 0px 20px;
     grid-template-areas:
         "main-project main-project"
-        "second-project third-project";
+        "second-project second-project"
+        "third-project fourth-project";
 }
 
 .main-project {

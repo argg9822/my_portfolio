@@ -200,7 +200,8 @@ ul{
 }
 
 .badge-green{
-    background-color: #00b800;
+    background-color: #083301;
+    color: #37ff00;
 }
 
 .badge-red{
@@ -229,6 +230,11 @@ ul{
 .badge-yellow{
     background-color: #352700;
     color: #ffc000;
+}
+
+.badge-dark{
+    background-color: #3f3f3f;
+    color: #ffffff;
 }
 
 /*

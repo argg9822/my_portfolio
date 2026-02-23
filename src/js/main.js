@@ -9,18 +9,20 @@ document.addEventListener('DOMContentLoaded', function () {
 const NAV_LINKS = document.querySelector('.scroll-nav');
 
 function initializeBasicsSlides (){
-  const splide = new Splide('.splide', {
-    type   : 'loop',
-    drag   : 'free',
-    focus  : 'center',
-    perPage: 1,
-    autoScroll: {
-      speed: 2,
-      autoStart: true
-    },
+  document.querySelectorAll('.splide').forEach(carousel => {
+    const splide = new Splide(carousel, {
+      type   : 'loop',
+      drag   : 'free',
+      focus  : 'center',
+      perPage: 1,
+      autoScroll: {
+        speed: 2,
+        autoStart: true
+      },
+    });
+    
+    splide.mount();
   });
-  
-  splide.mount();
 }
 
 function rebaseTopMenu(){
