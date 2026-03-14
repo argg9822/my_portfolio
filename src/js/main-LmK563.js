@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', rebaseTopMenu);
   menu();
   scaleImageCerts();
-  startCarouselTechs();
 });
 
 const NAV_LINKS = document.querySelector('.scroll-nav');
@@ -65,11 +64,42 @@ function menu(){
   }); 
 }
 
-function startCarouselTechs(){
-  const track = document.querySelector('.track');
-  const carousel = document.querySelector('.tech-carousel');
+function scaleImageCerts() {
+  const certs = document.querySelectorAll('.cert');
+  const blurred = document.querySelector('.blurred');
 
-  if (track.scrollWidth <= carousel.clientWidth) {
-    track.style.animation = 'none';
-  }
+  let placeholder = null;
+
+  const reset = () => {
+    certs.forEach(cert => cert.classList.remove('scaled'));
+    blurred.classList.remove('active');
+
+    if (placeholder) {
+      placeholder.remove();
+      placeholder = null;
+    }
+  };
+
+  certs.forEach(cert => {
+    cert.addEventListener('click', (e) => {
+      e.stopPropagation();
+
+      reset();
+
+      const rect = cert.getBoundingClientRect();
+
+      placeholder = document.createElement('div');
+      placeholder.style.width = rect.width + "px";
+      placeholder.style.height = rect.height + "px";
+
+      cert.parentNode.insertBefore(placeholder, cert);
+
+      cert.classList.add('scaled');
+
+      blurred.classList.add('active');
+    });
+  });
+
+  blurred.addEventListener('click', reset);
+  document.addEventListener('click', reset);
 }

@@ -5,7 +5,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background-image: url('../img/background3.webp');
+    background-image: url('../../public/img/background3.webp');
     background-size: cover;
     background-position: center;
     filter: blur(15px);
@@ -18,6 +18,27 @@
     max-width: var(--max-width-page);
     padding: 35px 0;
 }
+
+.blurred{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    transform: translateZ(0);
+    z-index: 800;
+    display: none;
+    pointer-events: none;
+}
+
+.blurred.active {
+    display: block;
+    pointer-events: auto;
+    opacity: 1;
+}
+
 
 header {
     display: grid;
@@ -41,8 +62,7 @@ header {
 
 .profile-img img {
     width: 200px;
-    height: 200px;
-    box-shadow: 0px 0px 0px 4px #ffffff2e;
+    height: 200px; 
 }
 
 .tech-grid img {
@@ -260,7 +280,8 @@ section {
     grid-template-areas:
         "main-project main-project"
         "second-project second-project"
-        "third-project fourth-project";
+        "third-project fourth-project"
+        "fifth-project sixth-project";
 }
 
 .main-project {
@@ -274,30 +295,22 @@ section {
 .third-project {
     grid-area: third-project;
 }
-
 .card {
     position: relative;
     border-radius: 10px;
     box-shadow: 0px 0px 12px 3px #ffffff12;
-    transition: all ease-in-out 0.3s;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     margin-top: 20px;
     padding: 30px;
-    -webkit-transition: all ease-in-out 0.3s;
-    -moz-transition: all ease-in-out 0.3s;
-    -ms-transition: all ease-in-out 0.3s;
-    -o-transition: all ease-in-out 0.3s;
 }
 
-.card:hover {
+.card:hover:not(.scaled) {
     transform: scale(1.01);
-    -webkit-transform: scale(1.01);
-    -moz-transform: scale(1.01);
-    -ms-transform: scale(1.01);
-    -o-transform: scale(1.01);
+}
+
+.card.scaled {
+    transform: scale(1.15);
+    z-index: 20;
 }
 
 .image-container {
@@ -483,15 +496,16 @@ section {
 
 .tech,
 .cert {
-    background: rgba(255, 255, 255, 0.08);
+    position: relative;
+    background: rgba(255, 255, 255, 0.06);
     padding: 12px;
     border-radius: 10px;
     font-weight: bold;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: 0.3s;
     cursor: pointer;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
 }
 
 .skills-container h3,
@@ -506,14 +520,14 @@ section {
 }
 
 .tech:hover,
-.cert:hover {
+.cert:hover:not(.scaled) {
     background: rgba(255, 255, 255, 0.171);
-    transform: scale(1.05);
+    transform: scale(1.02);
     box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.1);
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    -o-transform: scale(1.05);
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
 }
 
 .cert img {
@@ -526,14 +540,43 @@ section {
     -moz-transition: all ease-in-out 0.5s;
     -ms-transition: all ease-in-out 0.5s;
     -o-transition: all ease-in-out 0.5s;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
-.cert.scale {
-    top: 0;
-    width: 100%;
-    height: auto;
-    position: absolute;
+.cert.scaled{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2);
+    z-index: 2000;
+    -webkit-transform: translate(-50%, -50%) scale(2);
+    -moz-transform: translate(-50%, -50%) scale(2);
+    -ms-transform: translate(-50%, -50%) scale(2);
+    -o-transform: translate(-50%, -50%) scale(2);
 }
+
+.cert.scaled img,
+.cert.scaled {
+    pointer-events: none;
+}
+
+.scaled{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2);
+    background-color: hsl(0deg 100% 7.7% / 86%);
+    border: 3px solid #ffffff8c;
+    z-index: 2000;
+}
+
+/* .scaled:hover {
+    background-color: hsl(0deg 100% 7.7% / 86%);
+    border: 3px solid #ffffff8c;
+} */
 
 .study {
     background: rgba(255, 0, 0, 0.2);
