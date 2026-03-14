@@ -324,7 +324,7 @@ section {
 }
 
 .carousel:hover .track {
-    animation-play-state: paused;
+    animation-play-state: running;
 }
 
 .track span {
@@ -585,6 +585,10 @@ section {
         justify-content: center;
     }
 
+    h2{
+        font-size: 1.02em;
+    }
+
     .scroll-nav {
         display: none;
     }
@@ -601,6 +605,7 @@ section {
     .nav-container ul {
         display: flex;
         justify-content: space-between;
+        margin-top: var(--mobile-padding);
     }
 
     .description-container {
@@ -633,4 +638,9 @@ section {
     .technologies-list {
         display: none;
     }
+
+    .carousel .track {
+        animation: scroll 10s linear infinite;
+        -webkit-animation: scroll 10s linear infinite;
+}
 }
