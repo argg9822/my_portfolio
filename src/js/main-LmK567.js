@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', rebaseTopMenu);
   menu();
   scaleImageCerts();
+  loadingImages();
 });
 
 const NAV_LINKS = document.querySelector('.scroll-nav');
@@ -102,4 +103,16 @@ function scaleImageCerts() {
 
   blurred.addEventListener('click', reset);
   document.addEventListener('click', reset);
+}
+
+function loadingImages() {
+  document.querySelectorAll('img').forEach(img => {
+    if (img.complete) {
+        img.classList.add('loaded');
+    } else {
+      img.addEventListener('load', () => {
+        img.classList.add('loaded');
+      });
+    }
+  });
 }
